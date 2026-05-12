@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Success Toast Message -->
+  <div class="toast" id="successToast" aria-live="polite">
+    <div class="toast__header">
+      <img src="./assets/images/icon-success-check.svg" alt="Success Check Icon">
+      <h2>Message Sent!</h2>
+    </div>
+    <p class="toast__message">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <main class="main-container">
+    <div class="card">
+      <h1 class="card__title">Contact Us</h1>
+      <form id="contactForm" class="form" novalidate>
+        
+        <div class="form__group-row">
+          <div class="form__group" id="group-firstName">
+            <label for="firstName" class="form__label">First Name <span class="required-asterisk">*</span></label>
+            <input type="text" id="firstName" name="firstName" class="form__input">
+            <p class="form__error-message">This field is required</p>
+          </div>
+          
+          <div class="form__group" id="group-lastName">
+            <label for="lastName" class="form__label">Last Name <span class="required-asterisk">*</span></label>
+            <input type="text" id="lastName" name="lastName" class="form__input">
+            <p class="form__error-message">This field is required</p>
+          </div>
+        </div>
+
+        <div class="form__group" id="group-email">
+          <label for="email" class="form__label">Email Address <span class="required-asterisk">*</span></label>
+          <input type="email" id="email" name="email" class="form__input">
+          <p class="form__error-message" id="email-error">Please enter a valid email address</p>
+        </div>
+
+        <div class="form__group" id="group-queryType">
+          <p class="form__label">Query Type <span class="required-asterisk">*</span></p>
+          <div class="form__group-row">
+            <div class="form__radio-wrapper" id="wrapper-generalEnquiry">
+              <input type="radio" id="generalEnquiry" name="queryType" value="general" class="form__radio-input">
+              <label for="generalEnquiry" class="form__radio-label">
+                <span class="custom-radio"></span>
+                General Enquiry
+              </label>
+            </div>
+            
+            <div class="form__radio-wrapper" id="wrapper-supportRequest">
+              <input type="radio" id="supportRequest" name="queryType" value="support" class="form__radio-input">
+              <label for="supportRequest" class="form__radio-label">
+                <span class="custom-radio"></span>
+                Support Request
+              </label>
+            </div>
+          </div>
+          <p class="form__error-message">Please select a query type</p>
+        </div>
+
+        <div class="form__group" id="group-message">
+          <label for="message" class="form__label">Message <span class="required-asterisk">*</span></label>
+          <textarea id="message" name="message" class="form__textarea"></textarea>
+          <p class="form__error-message">This field is required</p>
+        </div>
+
+        <div class="form__group form__group--checkbox" id="group-consent">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="consent" name="consent" class="form__checkbox-input">
+            <label for="consent" class="form__checkbox-label">
+              <span class="custom-checkbox">
+                <img src="./assets/images/icon-checkbox-check.svg" alt="Check Icon" class="checkbox-icon">
+              </span>
+              I consent to being contacted by the team <span class="required-asterisk">*</span>
+            </label>
+          </div>
+          <p class="form__error-message">To submit this form, please consent to being contacted</p>
+        </div>
+
+        <button type="submit" class="form__submit-btn">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
