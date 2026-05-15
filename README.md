@@ -25,7 +25,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://github.com/rahulpaul127/contact-form)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/contact-form-uUfTqap306)
 - Live Site URL: [GitHub Pages](https://rahulpaul127.github.io/contact-form/)
 
 ---
